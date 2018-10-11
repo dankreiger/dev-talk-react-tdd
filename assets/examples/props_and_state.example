@@ -1,0 +1,30 @@
+// This syntax is much simpler in es7+
+
+// child component
+class BigUpProps extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: false }
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState(prevState => ({ active: !prevState.active }) )
+  }
+  render() {
+    return (
+      <h1>
+        The most important concepts in React are 
+        <code 
+          style={{'color': this.props.textColor}}>{this.props.propsText}
+        </code> and 
+        <code 
+          style={{'color' : this.state.active ? 'red' : 'blue' }}
+          onClick={this.handleClick}>State
+        </code>
+      </h1 >
+    )
+  }
+}
+
+// parent
+render(<BigUpProps textColor="orange" propsText="Props" />)

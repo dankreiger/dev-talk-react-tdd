@@ -1,0 +1,11 @@
+describe('validShuffle', () => {
+  it('returns true for valid shuffled strings', () => {
+    expect(validShuffle('password12345', 'dwposr4a531s2')).toBe(true);
+    expect(validShuffle('rat', 'art')).toBe(true);
+  });
+
+  it('returns false for invalid shuffled strings', () => {
+    expect(validShuffle('password12345', 'ssxpword12345')).toBe(false);
+    expect(validShuffle('dog', 'puppy')).toBe(false);
+  });
+});

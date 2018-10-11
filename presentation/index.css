@@ -1,0 +1,160 @@
+/* yes it's a stylesheet from hell, but this is just for fun */
+
+a, a:link, a:visited {
+  text-decoration: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.jestExample pre {
+  font-size: 21px;
+}
+
+.tdd-steps li {
+  font-size: 28px;
+}
+
+.puppy {
+  font-size: 20px;
+}
+
+.littlewoof {
+  font-size: 14px;
+  user-select: none;
+}
+
+.tinypuppywoof {
+  padding: 0 !important;
+  max-width: 100% !important;
+  max-height: 100% !important
+}
+
+.tinypuppy {
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.tinypuppy pre {
+  flex: 1 0 50%;
+  height: 100vh;
+}
+
+.tinypuppy .react-live-preview, .tinypuppy .react-live-error {
+  align-self: center;
+  flex: 1 0 50%;
+  height: 100vh;
+}
+
+.card-img {
+  /* filter: drop-shadow(3px 2px 4px rgba(0,0,0,0.9)) contrast(75%) invert(33%); */
+  border-radius: 0 !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.card-img-overlay {
+  background: rgba(0,0,0,0.75);
+}
+
+.card {
+  width: 380px !important;
+  height: 380px !important;
+  overflow: hidden;
+  border-radius: 0;
+  border: none;
+}
+.card img {
+  transition: transform 300ms;
+}
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.resultsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.redTest, .greenTest { 
+  max-height: 100% !important;
+  max-width: 100% !important;
+  height: 100%;
+  width: 100%;
+}
+
+.codeText {
+  font-family: 'Shadows Into Light', monospace !important;
+}
+
+.red {
+  color: #f65a5b !important;
+}
+
+.green {
+  color: rgb(94,205,61) !important;
+}
+
+.refactor {
+  color: #123456 !important;
+}
+
+.repeat {
+  color: #4b35ef !important;
+}
+
+.react-logo {
+  /* animation: react-logo-spin infinite 20s linear; */
+  height: 40vmin;
+}
+
+.react-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.react-link {
+  color: #61dafb;
+}
+/* 
+@keyframes react-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
