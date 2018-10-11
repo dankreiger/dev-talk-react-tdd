@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React, { Component } from 'react';
 import _ from 'lodash';
 import styled from 'styled-components';
@@ -17,7 +18,6 @@ import {
 } from 'reactstrap';
 // Import Spectacle Core tags
 import {
-  ComponentPlayground,
   Code,
   Deck,
   Heading,
@@ -45,8 +45,8 @@ import ComplexExample from '../assets/components/ComplexExample/ComplexExample';
 require('normalize.css');
 
 let newsApiKey = '';
-if(!newsApiKey) {
-  alert('Please enter your newsApiKey')
+if (!newsApiKey) {
+  newsApiKey = alert('Please enter your newsApiKey in presentation/index.js'); // eslint-disable-line no-alert
 }
 
 const NewsAPI = require('newsapi');
@@ -539,8 +539,8 @@ export default class Presentation extends Component {
             </Appear>
             <Appear>
               <ListItem textSize="26px" textColor="white">
-                Because a virtual DOM object is a representation of a real DOM object,
-                it can be manipulated much faster.
+                Because a virtual DOM object is a representation of a real DOM
+                object, it can be manipulated much faster.
               </ListItem>
             </Appear>
           </List>
@@ -559,42 +559,55 @@ export default class Presentation extends Component {
             <LiveError />
             <LivePreview />
           </LiveProvider>
-
         </Slide>
         <Slide bgColor="#282c34">
-          <Text textAlign="left" textColor="#fff">Props</Text>
+          <Text textAlign="left" textColor="#fff">
+            Props
+          </Text>
           <Appear>
             <List>
               <ListItem textSize="20px" textColor="#fff">
                 are received from a parent component
               </ListItem>
               <ListItem textSize="20px" textColor="#fff">
-                are simply arbitrary inputs being passed into a js class or function (our component)
+                are simply arbitrary inputs being passed into a js class or
+                function (our component)
               </ListItem>
               <ListItem textSize="20px" textColor="#fff">
                 represent a component's configuration (properties)
               </ListItem>
               <ListItem textSize="20px" textColor="#fff">
-                in projects we would normally do static type checking on <code>Props</code> using the <em>PropTypes</em> library (included in React, but still needs to be imported). On larger projects we can integrate either <em>Flow</em> or <em>TypeScript</em> for type checking.
-              </ListItem>              
+                in projects we would normally do static type checking on{' '}
+                <code>Props</code> using the <em>PropTypes</em> library
+                (included in React, but still needs to be imported). On larger
+                projects we can integrate either <em>Flow</em> or{' '}
+                <em>TypeScript</em> for type checking.
+              </ListItem>
             </List>
           </Appear>
           <Appear>
-            <Text textAlign="left" textColor="#fff">State</Text>
+            <Text textAlign="left" textColor="#fff">
+              State
+            </Text>
           </Appear>
           <Appear>
             <List>
               <ListItem textSize="20px" textColor="#fff">
-                similar to props, but is private and fully controlled by the component 
+                similar to props, but is private and fully controlled by the
+                component
               </ListItem>
               <ListItem textSize="20px" textColor="#fff">
                 can be indirectly manipulated by any of its descendants
               </ListItem>
               <ListItem textSize="20px" textColor="#fff">
-                state (aka component state or local state) is not to be confused with global state, which depends on an outside library like <em>Redux</em>, <em>MobX</em>, or <em>Flux</em>
+                state (aka component state or local state) is not to be confused
+                with global state, which depends on an outside library like{' '}
+                <em>Redux</em>, <em>MobX</em>, or <em>Flux</em>
               </ListItem>
               <ListItem textSize="20px" textColor="#fff">
-                static type checking state requires type checkers like <em>Flow</em> or <em>Typescript</em>, both of which play nicely with React (I lean toward TypeScript these days)
+                static type checking state requires type checkers like{' '}
+                <em>Flow</em> or <em>Typescript</em>, both of which play nicely
+                with React (I lean toward TypeScript these days)
               </ListItem>
             </List>
           </Appear>
@@ -603,26 +616,42 @@ export default class Presentation extends Component {
           <Text>One last concept before going back to TDD</Text>
         </Slide>
         <Slide bgColor="#282c34">
-          <Heading textColor="#fff" textSize="55px" margin="-30px 0 30px 0">Components</Heading>
+          <Heading textColor="#fff" textSize="55px" margin="-30px 0 30px 0">
+            Components
+          </Heading>
           <Appear>
-            <Text margin="0 0 20px 0" textColor="#fff">There are 2 types of components in React</Text>
+            <Text margin="0 0 20px 0" textColor="#fff">
+              There are 2 types of components in React
+            </Text>
           </Appear>
           <List>
             <Appear>
-              <ListItem margin="0 0 10px 0" textColor="#fff" textSize="30px">Stateful (aka <em>class</em> or <em>smart</em>) components</ListItem>
+              <ListItem margin="0 0 10px 0" textColor="#fff" textSize="30px">
+                Stateful (aka <em>class</em> or <em>smart</em>) components
+              </ListItem>
             </Appear>
             <Appear>
-              <List margin="0 0 10px 0" textColor="#fff" textSize="20px">these have <em>props</em> and <em>state</em></List>
+              <List margin="0 0 10px 0" textColor="#fff" textSize="20px">
+                these have <em>props</em> and <em>state</em>
+              </List>
             </Appear>
             <Appear>
-              <ListItem margin="0 0 10px 0" textColor="#fff" textSize="30px">Stateless (aka <em>functional</em> or <em>dumb</em>) components</ListItem>
+              <ListItem margin="0 0 10px 0" textColor="#fff" textSize="30px">
+                Stateless (aka <em>functional</em> or <em>dumb</em>) components
+              </ListItem>
             </Appear>
             <Appear>
-              <List textColor="#fff" textSize="20px">these only have <em>props</em></List>
-            </Appear>            
+              <List textColor="#fff" textSize="20px">
+                these only have <em>props</em>
+              </List>
+            </Appear>
           </List>
-          <Appear><Text textSize="30px" textColor="#fff">So let's test these</Text></Appear>
-        </Slide>      
+          <Appear>
+            <Text textSize="30px" textColor="#fff">
+              So let's test these
+            </Text>
+          </Appear>
+        </Slide>
         <Slide>
           <List>
             <ListItem textSize="28px">
@@ -630,13 +659,16 @@ export default class Presentation extends Component {
             </ListItem>
             <Appear>
               <ListItem textSize="28px">
-              We will use Enzyme's component rendering functions for testing: {' '}
-              <a href="https://airbnb.io/enzyme/docs/api/" target="_blank">https://airbnb.io/enzyme/docs/api</a>
+                We will use Enzyme's component rendering functions for testing:{' '}
+                <a href="https://airbnb.io/enzyme/docs/api/" target="_blank">
+                  https://airbnb.io/enzyme/docs/api
+                </a>
               </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize="28px">
-                Some of these tests may seem unnecessary when writing them (especially for functional components).
+                Some of these tests may seem unnecessary when writing them
+                (especially for functional components).
               </ListItem>
             </Appear>
           </List>
@@ -651,8 +683,7 @@ export default class Presentation extends Component {
           <List>
             <Appear>
               <ListItem textSize="28px">
-                Developing an app is like driving on a mountain
-                road.
+                Developing an app is like driving on a mountain road.
               </ListItem>
             </Appear>
           </List>
@@ -674,16 +705,26 @@ export default class Presentation extends Component {
           </List>
         </Slide>
         <Slide>
-          <Text>In the following example we will do unit tests on one stateful component</Text>
+          <Text>
+            In the following example we will do unit tests on one stateful
+            component
+          </Text>
           <List>
             <Appear>
-              <ListItem textSize="24px">Since we are only testing one component in isolation, we will render it with Enzyme's <code>Shallow</code> function</ListItem>
-            </Appear> 
+              <ListItem textSize="24px">
+                Since we are only testing one component in isolation, we will
+                render it with Enzyme's <code>Shallow</code> function
+              </ListItem>
+            </Appear>
             <Appear>
-              <ListItem textSize="24px">If there's time, we can write a small functional child component and use Enzyme's <code>Mount</code> function to test the child component from the parent</ListItem>
-            </Appear>                     
+              <ListItem textSize="24px">
+                If there's time, we can write a small functional child component
+                and use Enzyme's <code>Mount</code> function to test the child
+                component from the parent
+              </ListItem>
+            </Appear>
           </List>
-        </Slide>        
+        </Slide>
         <Slide bgColor="#000" notes="open click-counter repo">
           <ButtonExample />
         </Slide>
@@ -691,14 +732,21 @@ export default class Presentation extends Component {
           <Text>In the next example we will discuss:</Text>
           <List>
             <Appear>
-              <ListItem textSize="24px">unit testing on functional and stateful components</ListItem>
+              <ListItem textSize="24px">
+                unit testing on functional and stateful components
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem textSize="24px">snapshot testing, which is a unique feature in Jest</ListItem>
-            </Appear>  
+              <ListItem textSize="24px">
+                snapshot testing, which is a unique feature in Jest
+              </ListItem>
+            </Appear>
             <Appear>
-              <ListItem textSize="24px">integration testing by mocking an external api and testing async functions</ListItem>
-            </Appear>                        
+              <ListItem textSize="24px">
+                integration testing by mocking an external api and testing async
+                functions
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide className="tinypuppywoof" notes="open news-finder example">
@@ -714,47 +762,202 @@ export default class Presentation extends Component {
           </LiveProvider>
         </Slide>
         <Slide>
-          <Text textSize="24px" textAlign="left">We are most likely out of time, but if you are interested in seeing a small Redux boilerplate test setup, you can checkout my repo:</Text>
+          <Text textSize="24px" textAlign="left">
+            We are most likely out of time, but if you are interested in seeing
+            a small Redux boilerplate test setup, you can checkout my repo:
+          </Text>
           <List>
-            <Appear><ListItem textSize="16px">React-Redux Testing: <Link target="_blank" rel="noopener noreferrer" textSize="14px" href="https://github.com/dankreiger/react-redux-testing/">https://github.com/dankreiger/react-redux-testing/</Link></ListItem></Appear>
+            <Appear>
+              <ListItem textSize="16px">
+                React-Redux Testing:{' '}
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  textSize="14px"
+                  href="https://github.com/dankreiger/react-redux-testing/"
+                >
+                  https://github.com/dankreiger/react-redux-testing/
+                </Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide>
           <Text textSize="28px">React is still today enormously popular</Text>
           <Appear>
-            <Text textSize="24px">Check out <Link href="https://www.npmtrends.com/react-vs-@angular/core-vs-vue">this graph</Link> comparing the "3 Kings"... well this is what I call them</Text>
+            <Text textSize="24px">
+              Check out{' '}
+              <Link href="https://www.npmtrends.com/react-vs-@angular/core-vs-vue">
+                this graph
+              </Link>{' '}
+              comparing the "3 Kings"... well this is what I call them
+            </Text>
           </Appear>
           <Appear>
-            <Text textSize="24px">The truth is that it is a joy to develop with.</Text>
+            <Text textSize="24px">
+              The truth is that it is a joy to develop with.
+            </Text>
           </Appear>
           <Appear>
-            <Text textSize="24px">I think if you try it yourself, you will see why it is more than just a hype.</Text>
+            <Text textSize="24px">
+              I think if you try it yourself, you will see why it is more than
+              just a hype.
+            </Text>
           </Appear>
         </Slide>
-        <Slide>                
-          <Text textSize="30px" textAlign="left">More Links</Text>
-            <Appear>
-              <List>
-                <ListItem textSize="20px">Official Docs: <Link textSize="14px" href="https://reactjs.org/">https://reactjs.org/</Link></ListItem>
-                <ListItem textSize="20px">Redux (JS global state management): <Link textSize="14px" href="https://redux.js.org/">https://redux.js.org/</Link></ListItem>
-                <ListItem textSize="20px">Jest (delightful JS testing): <Link textSize="14px" href="https://jestjs.io/">https://jestjs.io/</Link></ListItem>
-                <ListItem textSize="20px">Enzyme (JS testing utilities for React): <Link textSize="14px" href="https://github.com/airbnb/enzyme">https://github.com/airbnb/enzyme</Link></ListItem>
-                <ListItem textSize="20px">React Router (declarative routing): <Link textSize="14px" href="https://github.com/ReactTraining/react-router">https://github.com/ReactTraining/react-router</Link></ListItem>
-                <ListItem textSize="20px">Create React App (creates React apps with no build configuration): <Link textSize="14px" href="https://github.com/facebook/create-react-app">https://github.com/facebook/create-react-app</Link></ListItem>
-                <ListItem textSize="20px">Create React Native App (creates React native apps with no build configuration): <Link textSize="14px" href="https://github.com/react-community/create-react-native-app/">https://github.com/react-community/create-react-native-app/</Link></ListItem>
-                <ListItem textSize="20px">Bit (easily share code between projects): <Link textSize="14px" href="https://github.com/teambit/bit">https://github.com/teambit/bit</Link></ListItem>
-                <ListItem textSize="20px">Reactstrap (Bootstrap 4 React components): <Link textSize="14px" href="https://reactstrap.github.io/">https://reactstrap.github.io/</Link></ListItem>
-                <ListItem textSize="20px">Redux Form (form state management in Redux): <Link textSize="14px" href="https://redux-form.com/7.4.2/">https://redux-form.com/7.4.2/</Link></ListItem>
-                <ListItem textSize="20px">React Native (iOS, Android, and Windows Phone apps): <Link textSize="14px" href="https://reactjs.org/">https://facebook.github.io/react-native/</Link></ListItem>
-                <ListItem textSize="20px">React 360 (for VR): <Link textSize="14px" href="https://facebook.github.io/react-360/">https://facebook.github.io/react-360/</Link></ListItem>
-                <ListItem textSize="20px">React Spring (animation): <Link textSize="14px" href="https://github.com/drcmda/react-spring">https://github.com/drcmda/react-spring</Link></ListItem>
-                <ListItem textSize="20px">React Loadable (promise based component loading): <Link textSize="14px" href="https://github.com/jamiebuilds/react-loadable">https://github.com/jamiebuilds/react-loadable</Link></ListItem>
-                <ListItem textSize="20px">Storybook (Interactive UI component dev & test): <Link textSize="14px" href="https://github.com/storybooks/storybook">https://github.com/storybooks/storybook</Link></ListItem>
-                <ListItem textSize="20px">Styled Components (JS component styling): <Link textSize="14px" href="https://www.styled-components.com/">https://www.styled-components.com/</Link></ListItem>
-                <ListItem textSize="20px">Cypress (Fast and easy E2E testing): <Link textSize="14px" href="https://github.com/cypress-io/cypress">https://github.com/cypress-io/cypress</Link></ListItem>
-                <ListItem textSize="20px">React for your mom: <Link textSize="14px" href="https://medium.com/@dankreiger/a-non-coders-introduction-to-facebook-s-react-js-javascript-library-f1a22bea92f6">https://medium.com/@dankreiger/a-non-coders-introduction-to-facebook-s-react-js-javascript-library-f1a22bea92f6</Link></ListItem>
-
-              </List>
+        <Slide>
+          <Text textSize="30px" textAlign="left">
+            More Links
+          </Text>
+          <Appear>
+            <List>
+              <ListItem textSize="20px">
+                Official Docs:{' '}
+                <Link textSize="14px" href="https://reactjs.org/">
+                  https://reactjs.org/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Redux (JS global state management):{' '}
+                <Link textSize="14px" href="https://redux.js.org/">
+                  https://redux.js.org/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Jest (delightful JS testing):{' '}
+                <Link textSize="14px" href="https://jestjs.io/">
+                  https://jestjs.io/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Enzyme (JS testing utilities for React):{' '}
+                <Link textSize="14px" href="https://github.com/airbnb/enzyme">
+                  https://github.com/airbnb/enzyme
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                React Router (declarative routing):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/ReactTraining/react-router"
+                >
+                  https://github.com/ReactTraining/react-router
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Create React App (creates React apps with no build
+                configuration):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/facebook/create-react-app"
+                >
+                  https://github.com/facebook/create-react-app
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Create React Native App (creates React native apps with no build
+                configuration):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/react-community/create-react-native-app/"
+                >
+                  https://github.com/react-community/create-react-native-app/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Bit (easily share code between projects):{' '}
+                <Link textSize="14px" href="https://github.com/teambit/bit">
+                  https://github.com/teambit/bit
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Reactstrap (Bootstrap 4 React components):{' '}
+                <Link textSize="14px" href="https://reactstrap.github.io/">
+                  https://reactstrap.github.io/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Redux Form (form state management in Redux):{' '}
+                <Link textSize="14px" href="https://redux-form.com/7.4.2/">
+                  https://redux-form.com/7.4.2/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                React Native (iOS, Android, and Windows Phone apps):{' '}
+                <Link textSize="14px" href="https://reactjs.org/">
+                  https://facebook.github.io/react-native/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Typescript React Starter (maintained by Microsoft):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/Microsoft/TypeScript-React-Starter"
+                >
+                  https://github.com/Microsoft/TypeScript-React-Starter
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                React 360 (for VR):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://facebook.github.io/react-360/"
+                >
+                  https://facebook.github.io/react-360/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                React Spring (animation):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/drcmda/react-spring"
+                >
+                  https://github.com/drcmda/react-spring
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                React Loadable (promise based component loading):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/jamiebuilds/react-loadable"
+                >
+                  https://github.com/jamiebuilds/react-loadable
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Storybook (Interactive UI component dev & test):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/storybooks/storybook"
+                >
+                  https://github.com/storybooks/storybook
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Styled Components (JS component styling):{' '}
+                <Link textSize="14px" href="https://www.styled-components.com/">
+                  https://www.styled-components.com/
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                Cypress (Fast and easy E2E testing):{' '}
+                <Link
+                  textSize="14px"
+                  href="https://github.com/cypress-io/cypress"
+                >
+                  https://github.com/cypress-io/cypress
+                </Link>
+              </ListItem>
+              <ListItem textSize="20px">
+                React for your mom:{' '}
+                <Link
+                  textSize="14px"
+                  href="https://medium.com/@dankreiger/a-non-coders-introduction-to-facebook-s-react-js-javascript-library-f1a22bea92f6"
+                >
+                  https://medium.com/@dankreiger/a-non-coders-introduction-to-facebook-s-react-js-javascript-library-f1a22bea92f6
+                </Link>
+              </ListItem>
+            </List>
           </Appear>
         </Slide>
         <Slide>
@@ -771,3 +974,5 @@ export default class Presentation extends Component {
     );
   }
 }
+
+/* eslint-enable quotes */
