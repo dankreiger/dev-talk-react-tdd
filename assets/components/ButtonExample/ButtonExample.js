@@ -1,3 +1,7 @@
+/* eslint-disable */
+
+/* cSpell:disable */
+
 import React, { Component } from 'react';
 import { Heading } from 'spectacle';
 import classNames from 'classnames';
@@ -35,9 +39,9 @@ export default class ButtonExample extends Component {
       <Container>
         <Row style={{'position': 'absolute', 'top': '-74%', 'color': 'white'}}>
           <Col className="align-items-start d-flex flex-column">
-          <p className="lead">Source: <a target="_blank" rel="noopener noreferrer" href="https://github.com/dankreiger/click-counter">https://github.com/dankreiger/click-counter</a></p>
-          <p className="lead">Travis CI: <a target="_blank" rel="noopener noreferrer" href="https://travis-ci.org/dankreiger/click-counter">https://travis-ci.org/dankreiger/click-counter</a></p>
-          <p className="lead">Live: <a target="_blank" rel="noopener noreferrer" href="https://click-counter.surge.sh/">https://click-counter.surge.sh</a></p>
+            <p className="lead">Source: <a target="_blank" rel="noopener noreferrer" href="https://github.com/dankreiger/click-counter">https://github.com/dankreiger/click-counter</a></p>
+            <p className="lead">Travis CI: <a target="_blank" rel="noopener noreferrer" href="https://travis-ci.org/dankreiger/click-counter">https://travis-ci.org/dankreiger/click-counter</a></p>
+            <p className="lead">Live: <a target="_blank" rel="noopener noreferrer" href="https://click-counter.surge.sh">https://click-counter.surge.sh</a></p>
           </Col>
         </Row>
         <Row>
@@ -77,3 +81,6 @@ export default class ButtonExample extends Component {
     );
   }
 }
+
+/* cSpell:enable */
+/* eslint disable */

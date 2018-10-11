@@ -1,3 +1,5 @@
+/* eslint-disable filenames/match-regex  */
+
 export const codePen1 = `
 // Live Site: https://news-finder.surge.sh (api key needed from newsAPI.org)
 // Source Code: https://github.com/dankreiger/news-finder
@@ -97,3 +99,4 @@ const SearchButton = ({text, handleClick}) =>
  
 render(<App/>)`;
 
+/* eslint-enable filenames/match-regex */

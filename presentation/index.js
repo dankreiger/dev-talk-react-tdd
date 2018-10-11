@@ -398,7 +398,7 @@ export default class Presentation extends Component {
         <Slide>
           <Text>We just wrote a unit test.</Text>
           <Appear>
-            <Text margin="30px 0 0">
+            <Text margin="20px 0">
               Usually we'd say there are 3 types of tests.
             </Text>
           </Appear>

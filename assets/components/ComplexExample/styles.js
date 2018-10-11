@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LocalTextStyled = styled.div`
   display: none;
@@ -9,23 +9,23 @@ export const LocalTextStyled = styled.div`
   &.show {
     display: flex;
   }
-`
+`;
 export const LocalJestText = styled.div`
   font-size: 72px;
-`
+`;
 
 export const GitCloneText = styled.code`
   padding: 10px 0;
   z-index: 100;
   font-size: 22px;
-`
+`;
 export const StyledComplex = styled.div`
   opacity: 1;
   transition: opacity 1s;
   &.hidden {
     opacity: 0;
   }
-`
+`;
 
 export const StyledCounter = styled.div`
   position: absolute;

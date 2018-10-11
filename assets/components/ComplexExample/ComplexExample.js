@@ -1,4 +1,4 @@
-/* eslint-disable filenames/match-regex, quotes, arrow-parens, react/jsx-boolean-value  */
+/* eslint-disable filenames/match-regex, quotes, arrow-parens, react/jsx-boolean-value, react/no-unknown-property, react/no-did-update-set-state  */
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { GitCloneText, LocalJestText, LocalTextStyled, StyledComplex, StyledCounter } from './styles';
@@ -18,7 +18,7 @@ class ComplexExample extends Component {
   componentDidUpdate(props, state) {
     if (state.count === -5) {
       clearInterval(this.interval);
-      this.setState(state => ({ goLocal: !state.goLocal }));
+      this.setState(prevState => ({ goLocal: !prevState.goLocal }));
     }
   }
 
@@ -28,15 +28,15 @@ class ComplexExample extends Component {
   render() {
     const { count, goLocal } = this.state;
     return (
-      <div style={{'backgroundColor': goLocal ? '#333' : '#fff', 'color': goLocal ? '#fff' : 'inherit'}}>
+      <div style={{ 'backgroundColor': goLocal ? '#333' : '#fff', 'color': goLocal ? '#fff' : 'inherit' }}>
         <LocalTextStyled className={classNames({ show: goLocal })}>
           <LocalJestText>
             Local Jest Project
           </LocalJestText>
           <div className="d-flex flex-column align-items-start">
-            <GitCloneText>Source:  <a href="https://github.com/dankreiger/jest-time-complexity.git">https://github.com/dankreiger/jest-time-complexity.git</a></GitCloneText>
-            <GitCloneText>Travis CI:  <a href="https://github.com/dankreiger/jest-time-complexity.git">https://travis-ci.org/dankreiger/click-counter</a></GitCloneText>
-          </div> 
+            <GitCloneText>Source:  <a href="https://github.com/dankreiger/jest-time-complexity.git">https://github.com/dankreiger/jest-time-complexity</a></GitCloneText>
+            <GitCloneText>Travis CI:  <a href="https://github.com/dankreiger/jest-time-complexity.git">https://travis-ci.org/dankreiger/jest-time-complexity</a></GitCloneText>
+          </div>
         </LocalTextStyled>
         <StyledComplex className={classNames({ hidden: goLocal })}>
           <StyledCounter className={classNames({ small: count <= 0 })}>
@@ -59,4 +59,4 @@ class ComplexExample extends Component {
 }
 
 export default ComplexExample;
-/* eslint-enable filenames/match-regex, quotes, arrow-parens, react/jsx-boolean-value */
+/* eslint-enable filenames/match-regex, quotes, arrow-parens, react/jsx-boolean-value, react/no-unknown-property, react/no-did-update-set-state */
