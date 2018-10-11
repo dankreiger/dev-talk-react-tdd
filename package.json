@@ -8,6 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
     "deploy": "npm run clean & npm run build && surge -p .",
+    "deploy:production": "npm run clean & npm run build && surge -p . --domain dev-talk-react-tdd.surge.sh",
     "export": "spectacle-renderer --delay 3000",
     "start": "cross-env NODE_ENV=development node server.js"
   },

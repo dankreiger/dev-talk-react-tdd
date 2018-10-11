@@ -1,8 +1,10 @@
 /* eslint-disable filenames/match-regex  */
 
 export const codePen1 = `
-// Live Site: https://news-finder.surge.sh (api key needed from newsAPI.org)
+// PLEASE VISIT GITHUB FOR THE TESTS + ACTUAL CODE
+
 // Source Code: https://github.com/dankreiger/news-finder
+// Live Site: https://news-finder.surge.sh (api key needed from newsAPI.org)
 // Travis CI: https://travis-ci.org/dankreiger/news-finder
 
 // source code will explain how to test async functions
