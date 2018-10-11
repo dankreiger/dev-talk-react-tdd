@@ -14,7 +14,10 @@ import {
   CardImg,
   CardImgOverlay,
   Form,
-  FormGroup
+  FormGroup,
+  Row,
+  Col,
+  Container
 } from 'reactstrap';
 // Import Spectacle Core tags
 import {
@@ -63,6 +66,9 @@ export default class Presentation extends Component {
       Button,
       Input,
       ListGroup,
+      Row,
+      Col,
+      Container,
       ListGroupItem,
       Card,
       CardTitle,
@@ -154,7 +160,7 @@ export default class Presentation extends Component {
           </Text>
         </Slide>
         <Slide>
-          <Heading>TDD Steps</Heading>
+          <Heading margin="0 0 20px 0">TDD Steps</Heading>
           <List ordered className="tdd-steps">
             <Appear>
               <ListItem>Write a test</ListItem>
@@ -705,7 +711,7 @@ export default class Presentation extends Component {
           </List>
         </Slide>
         <Slide>
-          <Text>
+          <Text margin="0 0 20px 0">
             In the following example we will do unit tests on one stateful
             component
           </Text>
@@ -729,7 +735,7 @@ export default class Presentation extends Component {
           <ButtonExample />
         </Slide>
         <Slide>
-          <Text>In the next example we will discuss:</Text>
+          <Text margin="0 0 20px 0">In the next example we will discuss:</Text>
           <List>
             <Appear>
               <ListItem textSize="24px">
@@ -762,18 +768,23 @@ export default class Presentation extends Component {
           </LiveProvider>
         </Slide>
         <Slide>
-          <Text textSize="24px" textAlign="left">
-            We are most likely out of time, but if you are interested in seeing
-            a small Redux boilerplate test setup, you can checkout my repo:
+          <Text textSize="36px" textAlign="left">
+            We are most likely out of time.
           </Text>
-          <List>
+          <Appear>
+            <Text textSize="36px" textAlign="left">
+              If you are interested in testing with React and Redux, you can
+              checkout my repo:
+            </Text>
+          </Appear>
+          <List margin="20px 0 20px 0">
             <Appear>
-              <ListItem textSize="16px">
+              <ListItem textSize="28px">
                 React-Redux Testing:{' '}
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  textSize="14px"
+                  textSize="20px"
                   href="https://github.com/dankreiger/react-redux-testing/"
                 >
                   https://github.com/dankreiger/react-redux-testing/
@@ -781,25 +792,42 @@ export default class Presentation extends Component {
               </ListItem>
             </Appear>
           </List>
+          <Appear>
+            <Text textSize="28px" textAlign="left">
+              You will find there a small app i.e. boilerplate Redux code with
+              testing on components, actions, reducers, and async integrations.
+            </Text>
+          </Appear>
         </Slide>
         <Slide>
-          <Text textSize="28px">React is still today enormously popular</Text>
+          <Text textSize="28px" margin="15px 0">
+            React is still enormously popular today.
+          </Text>
           <Appear>
-            <Text textSize="24px">
+            <Text textSize="28px" margin="15px 0">
               Check out{' '}
-              <Link href="https://www.npmtrends.com/react-vs-@angular/core-vs-vue">
+              <Link
+                href="https://www.npmtrends.com/react-vs-@angular/core-vs-vue"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 this graph
               </Link>{' '}
-              comparing the "3 Kings"... well this is what I call them
+              comparing the "3 Kings"
             </Text>
           </Appear>
           <Appear>
-            <Text textSize="24px">
+            <Text textSize="20px" margin="15px 0">
+              ... well this is what I call them
+            </Text>
+          </Appear>
+          <Appear>
+            <Text textSize="28px" margin="15px 0">
               The truth is that it is a joy to develop with.
             </Text>
           </Appear>
           <Appear>
-            <Text textSize="24px">
+            <Text textSize="28px" margin="15px 0">
               I think if you try it yourself, you will see why it is more than
               just a hype.
             </Text>
@@ -813,25 +841,45 @@ export default class Presentation extends Component {
             <List>
               <ListItem textSize="20px">
                 Official Docs:{' '}
-                <Link textSize="14px" href="https://reactjs.org/">
-                  https://reactjs.org/
+                <Link
+                  textSize="14px"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://reactjs.org
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Redux (JS global state management):{' '}
-                <Link textSize="14px" href="https://redux.js.org/">
-                  https://redux.js.org/
+                <Link
+                  textSize="14px"
+                  href="https://redux.js.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://redux.js.org
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Jest (delightful JS testing):{' '}
-                <Link textSize="14px" href="https://jestjs.io/">
-                  https://jestjs.io/
+                <Link
+                  textSize="14px"
+                  href="https://jestjs.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://jestjs.io
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Enzyme (JS testing utilities for React):{' '}
-                <Link textSize="14px" href="https://github.com/airbnb/enzyme">
+                <Link
+                  textSize="14px"
+                  href="https://github.com/airbnb/enzyme"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   https://github.com/airbnb/enzyme
                 </Link>
               </ListItem>
@@ -840,52 +888,73 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://github.com/ReactTraining/react-router"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/ReactTraining/react-router
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
-                Create React App (creates React apps with no build
-                configuration):{' '}
+                Create React App (no build
+                config):{' '}
                 <Link
                   textSize="14px"
                   href="https://github.com/facebook/create-react-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/facebook/create-react-app
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
-                Create React Native App (creates React native apps with no build
-                configuration):{' '}
+                Create React Native App (no build
+                config):{' '}
                 <Link
                   textSize="14px"
-                  href="https://github.com/react-community/create-react-native-app/"
+                  href="https://github.com/react-community/create-react-native-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  https://github.com/react-community/create-react-native-app/
+                  https://github.com/react-community/create-react-native-app
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Bit (easily share code between projects):{' '}
-                <Link textSize="14px" href="https://github.com/teambit/bit">
+                <Link
+                  textSize="14px"
+                  href="https://github.com/teambit/bit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   https://github.com/teambit/bit
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Reactstrap (Bootstrap 4 React components):{' '}
-                <Link textSize="14px" href="https://reactstrap.github.io/">
-                  https://reactstrap.github.io/
+                <Link
+                  textSize="14px"
+                  href="https://reactstrap.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://reactstrap.github.io
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Redux Form (form state management in Redux):{' '}
-                <Link textSize="14px" href="https://redux-form.com/7.4.2/">
-                  https://redux-form.com/7.4.2/
+                <Link
+                  textSize="14px"
+                  href="https://redux-form.com/7.4.2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://redux-form.com/7.4.2
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 React Native (iOS, Android, and Windows Phone apps):{' '}
-                <Link textSize="14px" href="https://reactjs.org/">
-                  https://facebook.github.io/react-native/
+                <Link textSize="14px" href="https://facebook.github.io/react-native">
+                  https://facebook.github.io/react-native
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
@@ -893,6 +962,8 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://github.com/Microsoft/TypeScript-React-Starter"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/Microsoft/TypeScript-React-Starter
                 </Link>
@@ -901,9 +972,11 @@ export default class Presentation extends Component {
                 React 360 (for VR):{' '}
                 <Link
                   textSize="14px"
-                  href="https://facebook.github.io/react-360/"
+                  href="https://facebook.github.io/react-360"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  https://facebook.github.io/react-360/
+                  https://facebook.github.io/react-360
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
@@ -911,6 +984,8 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://github.com/drcmda/react-spring"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/drcmda/react-spring
                 </Link>
@@ -920,6 +995,8 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://github.com/jamiebuilds/react-loadable"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/jamiebuilds/react-loadable
                 </Link>
@@ -929,14 +1006,21 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://github.com/storybooks/storybook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/storybooks/storybook
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
                 Styled Components (JS component styling):{' '}
-                <Link textSize="14px" href="https://www.styled-components.com/">
-                  https://www.styled-components.com/
+                <Link
+                  textSize="14px"
+                  href="https://www.styled-components.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.styled-components.com
                 </Link>
               </ListItem>
               <ListItem textSize="20px">
@@ -944,6 +1028,8 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://github.com/cypress-io/cypress"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/cypress-io/cypress
                 </Link>
@@ -953,6 +1039,8 @@ export default class Presentation extends Component {
                 <Link
                   textSize="14px"
                   href="https://medium.com/@dankreiger/a-non-coders-introduction-to-facebook-s-react-js-javascript-library-f1a22bea92f6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://medium.com/@dankreiger/a-non-coders-introduction-to-facebook-s-react-js-javascript-library-f1a22bea92f6
                 </Link>

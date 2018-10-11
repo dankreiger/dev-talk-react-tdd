@@ -34,7 +34,11 @@ export default class ButtonExample extends Component {
     return (
       <Container>
         <Row style={{'position': 'absolute', 'top': '-74%', 'color': 'white'}}>
-          <Col>Open <a target="_blank" rel="noopener noreferrer" href="https://click-counter.surge.sh/">https://click-counter.surge.sh/</a></Col>
+          <Col className="align-items-start d-flex flex-column">
+          <p className="lead">Source: <a target="_blank" rel="noopener noreferrer" href="https://github.com/dankreiger/click-counter">https://github.com/dankreiger/click-counter</a></p>
+          <p className="lead">Travis CI: <a target="_blank" rel="noopener noreferrer" href="https://travis-ci.org/dankreiger/click-counter">https://travis-ci.org/dankreiger/click-counter</a></p>
+          <p className="lead">Live: <a target="_blank" rel="noopener noreferrer" href="https://click-counter.surge.sh/">https://click-counter.surge.sh</a></p>
+          </Col>
         </Row>
         <Row>
           <Col xs={{ size:6, offset: 3 }}>

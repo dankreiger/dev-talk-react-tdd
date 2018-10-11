@@ -1,15 +1,23 @@
 import styled from 'styled-components';
 
-export const LocalJestText = styled.div`
+export const LocalTextStyled = styled.div`
   display: none;
-  position: absolute;
-  font-size: 72px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  height: 100vh;
   &.show {
-    display: block;
-  } 
+    display: flex;
+  }
+`
+export const LocalJestText = styled.div`
+  font-size: 72px;
+`
+
+export const GitCloneText = styled.code`
+  padding: 10px 0;
+  z-index: 100;
+  font-size: 22px;
 `
 export const StyledComplex = styled.div`
   opacity: 1;

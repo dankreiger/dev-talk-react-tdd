@@ -1,4 +1,11 @@
-export const codePen1 = `// stateful component
+export const codePen1 = `
+// Live Site: https://news-finder.surge.sh (api key needed from newsAPI.org)
+// Source Code: https://github.com/dankreiger/news-finder
+// Travis CI: https://travis-ci.org/dankreiger/news-finder
+
+// source code will explain how to test async functions
+
+// stateful component
 class App extends React.Component {
   constructor() {
     super();
@@ -29,19 +36,31 @@ class App extends React.Component {
     const { inputVal, searchResults } = this.state;
     const articles = _.take(searchResults, 4);
     return (    
-      <div>
+      <Container fluid>
+        <Row className="flex-column">
+          <Col xs="12">
+            <h6><a href="https://github.com/dankreiger/news-finder" target="_blank" rel="noopener noreferrer">Source</a><small> (much better than this mess)</small></h6>
+            <h6><a href="https://news-finder.surge.sh/" target="_blank" rel="noopener noreferrer">Live</a><small> (api key needed)</small></h6>
+            <h6><a href="https://travis-ci.org/dankreiger/news-finder" target="_blank" rel="noopener noreferrer">Travis CI</a></h6>
+            <p>API attribution: <a href="https://newsapi.org/" target="_blank" rel="noopener noreferrer">NewsAPI.org</a></p>          
+          </Col>               
+        </Row>
+        <Row className="form-row">
+          <Col xs="12" sm="9">
+            <Input
+              onChange={this.handleChange}
+              value={inputVal}
+              placeholder="Enter a search term"
+            />
+          </Col>
+          <Col xs="12" sm="3">
+            <SearchButton handleClick={this.handleClick} text="Click"/>
+          </Col>
+        </Row>
         {searchResults && 
           <Articles articles={articles} />
         }
-        <h5><a href="https://news-finder.surge.sh/" target="_blank" rel="noopener noreferrer">Please open this on surge</a></h5>
-        <p>NewsAPI.org</p>
-        <Input
-          onChange={this.handleChange}
-          value={inputVal}
-          placeholder="Enter a search term"
-        />
-        <SearchButton handleClick={this.handleClick} text="Click"/>
-      </div>
+      </Container>
     )
   }
 }
@@ -50,27 +69,29 @@ class App extends React.Component {
 
 // functional (stateless) component
 const Articles = ({articles}) => (
-  <div className="resultsWrapper">
+  <Row noGutters style={{'marginTop': '10px'}}>
     { articles.map((a, i) => (
-      <a key={i} className="d-block" href={a.url} target="_blank">
-      <Card inverse>
-        <CardImg width="100%" src={a.urlToImage} alt={a.title} />
-        <CardImgOverlay>
-          <CardTitle>{a.title}</CardTitle>
-          <CardText>{a.description}</CardText>
-          <CardText>
-            <small className="text-muted">{a.source.name}</small>
-          </CardText>
-        </CardImgOverlay>
-      </Card> 
-      </a>  
-    ))}   
-  </div>  
+      <Col xs="6" key={i}>
+        <a className="d-block" href={a.url} target="_blank">
+        <Card inverse>
+          <CardImg width="100%" src={a.urlToImage} alt={a.title} />
+          <CardImgOverlay>
+            <CardTitle>{a.title}</CardTitle>
+            <CardText>{a.description}</CardText>
+            <CardText>
+              <small className="text-muted">{a.source.name}</small>
+            </CardText>
+          </CardImgOverlay>
+        </Card> 
+        </a>  
+      </Col>
+    ))}       
+  </Row>
 )
 
 
 const SearchButton = ({text, handleClick}) =>
-  <Button color="primary" onClick={handleClick}> 
+  <Button className="w-100" color="primary" onClick={handleClick}> 
     {text}
   </Button>
  

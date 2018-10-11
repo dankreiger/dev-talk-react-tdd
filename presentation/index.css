@@ -77,8 +77,8 @@ a, a:link, a:visited {
 }
 
 .card {
-  width: 380px !important;
-  height: 380px !important;
+  /* width: 380px !important; */
+  height: 360px !important;
   overflow: hidden;
   border-radius: 0;
   border: none;
@@ -88,12 +88,6 @@ a, a:link, a:visited {
 }
 .card:hover img {
   transform: scale(1.02);
-}
-
-.resultsWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
 }
 
 .redTest, .greenTest { 
