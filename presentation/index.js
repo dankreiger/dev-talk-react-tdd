@@ -206,7 +206,7 @@ export default class Presentation extends Component {
           <Text>Simple Example</Text>
           <List>
             <ListItem margin="10px 0 0 0">
-              Write a pure function that return the sum of two inputs.
+              Write a pure function that returns the sum of two inputs.
             </ListItem>
             <ListItem margin="30px 0 0 0" textSize="24px">
               For brevity, we won't check for input data types.
